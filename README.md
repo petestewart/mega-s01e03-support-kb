@@ -34,3 +34,9 @@ Support desk. Decision records: whoever signed them.
 ---
 
 Exported 2026-10-04 from the `support` repo, `apps/kb/` → `src/`.
+
+## S01E03 delivery
+
+- Tickets: [issues](https://github.com/petestewart/mega-s01e03-support-kb/issues)
+- Page source: `src/routes/kb/incidents/4471/problems/+page.svx`
+- Page as the desk sees it: `rendered/kb/incidents/4471/problems.html` (`npm run build` makes it again)

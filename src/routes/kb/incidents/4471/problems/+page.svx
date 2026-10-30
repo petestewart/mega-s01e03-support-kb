@@ -1,0 +1,51 @@
+---
+layout: runbook
+title: '#4471 · the problems inside the merged ticket'
+owner: petestewart
+status: open
+reviewed: 2026-10-30
+signature: petestewart
+---
+
+<script>
+  import ProblemTable from '#lib/kb/ProblemTable.svelte';
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+[#4471](/kb/incidents/4471) is marked known: one issue, one fix queued. It is not one issue. The
+fix queued for the parser leaves two problems open, so each problem now has its own ticket.
+
+<ProblemTable ticket={4471} repo="https://github.com/petestewart/mega-s01e03-support-kb" />
+
+<Callout kind="warn">
+Do not close the other tickets when the parser fix ships. It does not touch the booking-v3 hint,
+and a day/month flip does not explain the one-day moves.
+</Callout>
+
+## The problems
+
+**Parser.** The shared parser reads every date month first. A tenant that writes the day first
+gets day and month swapped, through any channel. Every tenant on file writes the day first.
+
+**Hint.** booking-v3 prints `MM/DD/YYYY` under its date field. People type what it tells them, and
+the form reads the date the tenant's way. This happens only on the form channel of booking-v3
+tenants. Their app and email reports are parser reports.
+
+**One-day moves.** These reports show a date one day off, or a different day for two people looking
+at the same meeting. A swap of day and month cannot do that. The cause is not proven: time zone
+conversion is the first thing to check, and the export holds no data that confirms it.
+
+## How to place a report
+
+Go by the tenant and the channel, as `causes.ts` does. Do not use the intake tag: it follows the
+reporter's browser, so it marks day-first tenants on `en-US` browsers as `hint`. Do not use the
+subject line either, because the same subject appears on reports with different causes (see
+[triage](/kb/triage/dedupe)).
+
+## The desk's table
+
+<CauseTable ticket={4471} />
+
+<RenderStamp {signature} />
