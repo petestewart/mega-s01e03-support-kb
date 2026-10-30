@@ -13,9 +13,9 @@
 
   // The one-day moves stay in the data as `parser`; here they count as their own problem.
   const rows = $derived([
-    { issue: 1, problem: 'shared parser reads dates month first', reports: count('parser') - moved },
-    { issue: 2, problem: 'booking-v3 hint says MM/DD/YYYY', reports: count('hint') },
-    { issue: 3, problem: 'dates move by one day (cause not proven)', reports: moved },
+    { issue: 1, problem: 'shared parser reads dates month first', reports: count('parser') - moved, outcome: 'fixed: parse dd/mm for eu locales' },
+    { issue: 2, problem: 'booking-v3 hint says MM/DD/YYYY', reports: count('hint'), outcome: "won't fix: booking-v3 form retired" },
+    { issue: 3, problem: 'dates move by one day (cause not proven)', reports: moved, outcome: 'open: no verdict from engineering' },
   ]);
 </script>
 
@@ -26,13 +26,14 @@
 </p>
 
 <table>
-  <thead><tr><th>ticket</th><th>problem</th><th>reports</th></tr></thead>
+  <thead><tr><th>ticket</th><th>problem</th><th>reports</th><th>outcome</th></tr></thead>
   <tbody>
     {#each rows as r (r.issue)}
       <tr>
         <td><a href="{repo}/issues/{r.issue}">{r.issue}</a></td>
         <td>{r.problem}</td>
         <td>{r.reports}</td>
+        <td>{r.outcome}</td>
       </tr>
     {/each}
   </tbody>

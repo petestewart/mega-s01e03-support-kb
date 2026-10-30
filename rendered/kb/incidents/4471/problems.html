@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="../../../_app/immutable/entry/start.hfrNcRrX.js" rel="modulepreload">
+    <link href="../../../_app/immutable/entry/start.DMwrwZDH.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/BQfMM7Jv.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/DFiWcxap.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/VEAz1aUG.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/BWUdTF5t.js" rel="modulepreload">
-		<link href="../../../_app/immutable/entry/app.CWMhcBqK.js" rel="modulepreload">
+		<link href="../../../_app/immutable/entry/app.BUszOytv.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/D37ruAJc.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/t1zubgls.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/C-ggmPc3.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CWCEDZjb.js" rel="modulepreload">
 		<link href="../../../_app/immutable/nodes/0.CwQmFXlZ.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/BqcJOarN.js" rel="modulepreload">
-		<link href="../../../_app/immutable/nodes/5.D7Tevrhk.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/DWDaflsG.js" rel="modulepreload">
+		<link href="../../../_app/immutable/nodes/5.Dhpv1Wy1.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/EuiXrXkC.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/B7okSU-D.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CC-eG-Kb.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/QXMkaMfC.js" rel="modulepreload">
@@ -26,10 +26,12 @@
 		<link href="../../../_app/immutable/assets/5.Co0J4Uhy.css" rel="stylesheet">
   </head>
   <body>
-    <div><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · the problems inside the merged ticket</h1> <p class="meta svelte-e2jw2j"><span>owner <b>petestewart</b></span> <span class="status open svelte-e2jw2j">open</span> <span class="svelte-e2jw2j">reviewed 2026-10-30 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> is marked known: one issue, one fix queued. It is not one issue. The
-fix queued for the parser leaves two problems open, so each problem now has its own ticket.</p> <p class="sum svelte-1op6c6"><strong>412</strong> reports in #4471 · <strong>3</strong> problems ·
-  CauseTable shows <strong>379</strong> for <code>parser</code> because it counts the <strong>5</strong> one-day moves there</p> <table><thead><tr><th>ticket</th><th>problem</th><th>reports</th></tr></thead><tbody><!--[--><tr><td><a href="https://github.com/petestewart/mega-s01e03-support-kb/issues/1">1</a></td><td>shared parser reads dates month first</td><td>374</td></tr><tr><td><a href="https://github.com/petestewart/mega-s01e03-support-kb/issues/2">2</a></td><td>booking-v3 hint says MM/DD/YYYY</td><td>33</td></tr><tr><td><a href="https://github.com/petestewart/mega-s01e03-support-kb/issues/3">3</a></td><td>dates move by one day (cause not proven)</td><td>5</td></tr><!--]--></tbody></table><!----> <aside class="warn svelte-17bri61"><!---->Do not close the other tickets when the parser fix ships. It does not touch the booking-v3 hint,
-and a day/month flip does not explain the one-day moves.<!----></aside><!----> <h2>The problems</h2> <p><strong>Parser.</strong> The shared parser reads every date month first. A tenant that writes the day first
+    <div><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · the problems inside the merged ticket</h1> <p class="meta svelte-e2jw2j"><span>owner <b>petestewart</b></span> <span class="status open svelte-e2jw2j">open</span> <span class="svelte-e2jw2j">reviewed 2026-10-30 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> was merged as one issue. It is not one issue, so each problem has its
+own ticket. Engineering closed #4471 on 5 October: the parser is fixed and the hint will not be
+fixed, because the booking-v3 form is retired. The update says nothing about the one-day moves.</p> <p class="sum svelte-1op6c6"><strong>412</strong> reports in #4471 · <strong>3</strong> problems ·
+  CauseTable shows <strong>379</strong> for <code>parser</code> because it counts the <strong>5</strong> one-day moves there</p> <table><thead><tr><th>ticket</th><th>problem</th><th>reports</th><th>outcome</th></tr></thead><tbody><!--[--><tr><td><a href="https://github.com/petestewart/mega-s01e03-support-kb/issues/1">1</a></td><td>shared parser reads dates month first</td><td>374</td><td>fixed: parse dd/mm for eu locales</td></tr><tr><td><a href="https://github.com/petestewart/mega-s01e03-support-kb/issues/2">2</a></td><td>booking-v3 hint says MM/DD/YYYY</td><td>33</td><td>won't fix: booking-v3 form retired</td></tr><tr><td><a href="https://github.com/petestewart/mega-s01e03-support-kb/issues/3">3</a></td><td>dates move by one day (cause not proven)</td><td>5</td><td>open: no verdict from engineering</td></tr><!--]--></tbody></table><!----> <aside class="warn svelte-17bri61"><!---->The one-day moves are still open. #4471 is closed, but a day/month fix does not explain a one-day
+shift. If a report like these comes in after 5 October, add it to ticket 3 and do not merge it
+into a closed ticket.<!----></aside><!----> <h2>The problems</h2> <p><strong>Parser.</strong> The shared parser reads every date month first. A tenant that writes the day first
 gets day and month swapped, through any channel. Every tenant on file writes the day first.</p> <p><strong>Hint.</strong> booking-v3 prints <code>MM/DD/YYYY</code> under its date field. People type what it tells them, and
 the form reads the date the tenant’s way. This happens only on the form channel of booking-v3
 tenants. Their app and email reports are parser reports.</p> <p><strong>One-day moves.</strong> These reports show a date one day off, or a different day for two people looking
@@ -40,15 +42,15 @@ subject line either, because the same subject appears on reports with different 
 			
 			<script>
 				{
-					__sveltekit_rt0101 = {
+					__sveltekit_107xfvd = {
 						base: new URL("../../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.hfrNcRrX.js"),
-						import("../../../_app/immutable/entry/app.CWMhcBqK.js")
+						import("../../../_app/immutable/entry/start.DMwrwZDH.js"),
+						import("../../../_app/immutable/entry/app.BUszOytv.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],

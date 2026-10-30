@@ -14,14 +14,16 @@ signature: petestewart
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
 </script>
 
-[#4471](/kb/incidents/4471) is marked known: one issue, one fix queued. It is not one issue. The
-fix queued for the parser leaves two problems open, so each problem now has its own ticket.
+[#4471](/kb/incidents/4471) was merged as one issue. It is not one issue, so each problem has its
+own ticket. Engineering closed #4471 on 5 October: the parser is fixed and the hint will not be
+fixed, because the booking-v3 form is retired. The update says nothing about the one-day moves.
 
 <ProblemTable ticket={4471} repo="https://github.com/petestewart/mega-s01e03-support-kb" />
 
 <Callout kind="warn">
-Do not close the other tickets when the parser fix ships. It does not touch the booking-v3 hint,
-and a day/month flip does not explain the one-day moves.
+The one-day moves are still open. #4471 is closed, but a day/month fix does not explain a one-day
+shift. If a report like these comes in after 5 October, add it to ticket 3 and do not merge it
+into a closed ticket.
 </Callout>
 
 ## The problems
