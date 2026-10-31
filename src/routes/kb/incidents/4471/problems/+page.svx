@@ -4,7 +4,7 @@ title: '#4471 · the problems inside the merged ticket'
 owner: petestewart
 status: open
 reviewed: 2026-10-30
-signature: petestewart
+signature: v1.eyJzdWIiOiI3NjA5IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM0MDI5MjAsImV4cCI6MTc5MzQ4OTMyMH0.uv8EBu33ZWp3Loj7LZS68GdRA75O-C2vebJySPeA-5A
 ---
 
 <script>
